@@ -18,7 +18,7 @@ User Service: Manages user profiles and authentication credentials.
 
 Notification Service: Sends email updates for order confirmations.
 
-Database: A relational database (PostgreSQL) for ACID compliance on orders and inventory.
+Database: A relational database for ACID compliance on orders and inventory.
 
 2. Which architectural patterns will apply?
 
@@ -38,7 +38,7 @@ Service to Service (Asynchronous): Critical but non-blocking tasks use a Message
 
 4. What kind of authN and authZ will be needed where?
 
-Authentication (AuthN): Implemented using JWT (JSON Web Tokens).
+Authentication (AuthN): Implemented using JWT .
 
 The User Service issues a token upon login.
 
