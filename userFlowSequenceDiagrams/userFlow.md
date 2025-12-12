@@ -1,48 +1,52 @@
 User Flows & Interactions
 
-User Sign Up
+Core User Flows
+
+Here are the primary interactions within the system, detailing the services and data stores involved in each.
+
+1. User Sign Up
 
 Actors/Elements: Customer, Frontend, API Gateway, User Service, Database.
 
 Description: A new user registers for an account. Credentials are hashed and stored.
 
-User Login
+2. User Login
 
 Actors/Elements: Customer, Frontend, API Gateway, User Service, Database.
 
 Description: User exchanges credentials for a JWT (JSON Web Token) for session authentication.
 
-Browse Products
+3. Browse Products
 
 Actors/Elements: Customer, Frontend, API Gateway, Product Service, Database.
 
 Description: User views the list of available products and prices.
 
-View Product Details
+4. View Product Details
 
 Actors/Elements: Customer, Frontend, API Gateway, Product Service, Database.
 
 Description: User clicks a specific item to see detailed description and stock status.
 
-Place Order (Checkout) (Unique)
+5. Place Order (Checkout) (Unique)
 
 Actors/Elements: Customer, Frontend, API Gateway, Order Service, Database, Message Queue.
 
 Description: User finalizes purchase. Order is saved, inventory is checked, and an event is published for async processing.
 
-Async Order Notification (Unique)
+6. Async Order Notification (Unique)
 
 Actors/Elements: Message Queue, Notification Service, External Email Provider.
 
 Description: The system picks up a "New Order" event and sends a confirmation email without blocking the user.
 
-Admin Update Inventory (Unique)
+7. Admin Update Inventory (Unique)
 
 Actors/Elements: Admin, Admin Frontend, API Gateway, Product Service, Database.
 
 Description: Store admin updates the stock count for a specific product.
 
-Admin View Order History (Unique)
+8. Admin View Order History (Unique)
 
 Actors/Elements: Admin, Admin Frontend, API Gateway, Order Service, Database.
 
