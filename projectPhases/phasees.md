@@ -1,5 +1,3 @@
-# E-Commerce-Platform
-
 # **Project Roadmap & Architecture Evolution**
 
 ## **Phase I: Release Candidate**
